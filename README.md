@@ -5,8 +5,8 @@ Arkance homework
 - clone this repo
 - place input file to projectDirectory\Data
 - run with Visual Studio 2022 -> run app 
-   - run using command line - set QTY_ENV=production
-                            - dotnet run
+   - run using command line -> set QTY_ENV=production
+                            -> navigate to project dir -> dotnet run
 - provide input fileName (without *.csv)
 - in projectDirectory\Outputs find output file in following name format yyyy-MM-dd_HH-mm-ss_inputFileName_output.csv
 
