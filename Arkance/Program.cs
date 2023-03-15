@@ -50,10 +50,7 @@
 					while (tempItem.Contains("/"))
 					{
 						tempItem = tempItem.Substring(0, tempItem.LastIndexOf("/"));
-						var quantityOfItemLevelUp = int.Parse(lines
-																.FirstOrDefault(l => l.Split(";")[0] == tempItem)
-																.Split(";")[2]
-																);
+						var quantityOfItemLevelUp = int.Parse(lines.FirstOrDefault(l => l.Split(";")[0] == tempItem).Split(";")[2]);
 						tempQuantity *= quantityOfItemLevelUp; 
 					}
 
