@@ -10,7 +10,15 @@
 		public static void GetQuantityOfAllParts()
 		{
 			string workingDirectory = Environment.CurrentDirectory;
-			string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+			string projectDirectory = "";
+			if (Environment.GetEnvironmentVariable("QTY_ENV") == "production")
+			{
+				projectDirectory = workingDirectory;
+			}
+			else
+			{
+				projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+			}
 
 			Console.WriteLine("Please, provide file name to count part quantity:");
 			string fileName = Console.ReadLine();
